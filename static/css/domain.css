@@ -1,0 +1,303 @@
+.domain {
+    font-family: "Raleway";
+    text-align: justify;
+    width: 100vw;
+    background-image: url("../images/domain/Frame.jpg");
+    background-size: contain;
+    scroll-margin-top: 50px;
+}
+
+.domain h3 { 
+    font-family: "Mulish";
+}
+
+.modal-backdrop{
+    z-index: -100;
+}
+
+.domain .row {
+    color: white;
+}
+
+.domain .center-heading {
+    text-align: center;
+    color: #0C8A2F;
+}
+
+.domain .character-entity {
+    color: rgb(8, 201, 8);
+    font-size: 40px;
+    line-height: 0.4;
+}
+
+.domain .close {
+    color: #0C8A2F;
+}
+
+.domain .modal {
+    padding: 0px !important;
+}
+
+.domain .show{    
+    display: -webkit-box !important;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.domain .modal .icon-container {
+    width: 99%;
+    text-align: center;
+}
+
+.domain .modal-header .close {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+}
+
+.domain .modal-dialog {
+    margin: auto;
+}
+
+.domain .modal-body {
+    padding-top: 0rem;
+    margin-left: 1rem;
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+}
+
+.domain .sizze {
+    padding-top: 1rem;
+    width: 120px;
+    height: 120px;
+}
+
+.domain .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.domain .modal-content{
+    background-color: #0E0E0E;
+    border: solid 1px darkgreen;
+}
+
+.domain .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    max-width: 100vw !important;
+}
+
+.domain .rotate {
+    width: 100px;
+    height: 100px;
+}
+
+.domain .dcontent {
+    margin-right: 0;
+    padding-left: 10%;
+}
+
+.domain .btn-primary:not(:disabled):not(.disabled):active{
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.domain #img1,
+.domain #im,
+.domain #im1,
+.domain #im2,
+.domain #im3,
+.domain #im4 {
+    height: 200px;
+    width: 200px;
+    border: 0px;
+}
+
+.domain .img2,
+.domain #imgD {
+    margin-top: -225px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    height: 170px;
+    width: 170px;
+    border: 0px black;
+}
+
+.domain .i1 {
+    margin-top: -225px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    height: 170px;
+    width: 170px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border: 0px;
+}
+
+.domain .i2 {
+    height: 170px;
+    width: 170px;
+    margin-top: -225px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    border: 0px;
+}
+
+.domain .i4 {
+    margin-top: -225px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    height: 170px;
+    width: 170px;
+    padding-bottom: 20px;
+    border: 0px;
+}
+
+.domain .img2 {
+    width: 170px;
+    height: 170px;
+}
+
+.domain #imgD {
+    padding: 5px 10px;
+}
+
+.domain #content-desktop {
+    display: block;
+}
+
+.domain #content-mobile {
+    display: none;
+}
+
+.domain .tech {
+    transform: scale(0.8);
+    text-align: center;
+}
+
+.domain .para {
+    font-style: italic;
+}
+
+.domain .row {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .domain {
+        width: 100vw;
+        position: relative;
+        display: block;
+        background-image: url("../images/domain/mBackground.jpg");
+        background-size: contain;
+    }
+
+    .domain .tech {
+        transform: scale(0.9);
+    }
+
+    .domain #text {
+        font-size: 18px;
+        margin-top: -10px;
+        margin-bottom: 30px;
+    }
+    .domain .row {
+        color: white;
+        margin: 30px 0;
+    }
+
+    .domain .rotate {
+        width: 100px;
+        height: 100px;
+    }
+
+    .domain #mimg1,
+    .domain #mim,
+    .domain #mim1,
+    .domain #mim2,
+    .domain #mim3,
+    .domain #mim4 {
+        height: 120px;
+        width: 120px;
+        border: 0px;
+    }
+
+    .domain .mimg2 {
+        height: 100px;
+        width: 100px;
+        margin-top: -147px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        border: 0px;
+    }
+
+    .domain #mimgD {
+        height: 100px;
+        width: 100px;
+        margin-top: -147px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        border: 0px;
+    }
+
+    .domain .mi1 {
+        height: 100px;
+        width: 100px;
+        margin-top: -147px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        border: 0px;
+    }
+
+    .domain .mi2 {
+        height: 100px;
+        width: 100px;
+        margin-top: -147px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        border: 0px;
+    }
+
+    .domain .mi4 {
+        height: 100px;
+        width: 100px;
+        margin-top: -147px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        border: 0px;
+    }
+
+    .domain #mimgD {
+        padding: 5px 10px;
+    }
+
+    .domain #content-desktop {
+        display: none;
+    }
+
+    .domain #content-mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .domain .modal-dialog {
+        margin: auto 5%;
+    }
+}

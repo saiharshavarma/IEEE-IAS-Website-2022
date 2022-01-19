@@ -1,0 +1,242 @@
+.aboutus {
+    z-index: 1;
+    height: 80vh;
+    width: 100vw;
+    scroll-margin-top: 50px;
+}
+
+.aboutus .about-us {
+    text-align: center;
+    padding: 0 0 0 0;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.aboutus .heading {
+    color: #ffffff;
+    text-align: left;
+    margin-top: 5%;
+    font-size: 45px;
+    line-height: 53px;
+    font-family: "Mulish" !important;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.aboutus #pop {
+    text-align: justify;
+    padding: 0 9% 0 7.8%;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Raleway", sans-serif;
+}
+
+.aboutus .container {
+    margin: 0 auto !important;
+}
+
+@media screen and (max-width: 430px) {
+    .aboutus {
+        margin-top: 100%;
+        height: 90vh;
+        position: relative;
+    }
+    .aboutus .heading {
+        margin-left: 0%;
+    }
+    .aboutus .about-us {
+        width: 300px;
+        margin: 0px auto;
+        padding-top: 0px;
+    }
+
+    .aboutus .main4 {
+        font-size: 5px !important;
+        font-weight: normal !important;
+        margin: 15px 14px 20px 25px;
+        border: 4px solid #ffffff;
+        width: 280px;
+        text-align: center;
+        border-radius: 10px;
+        padding: 2px 2px 2px 2px;
+    }
+
+    .aboutus #bt1,
+    #bt2,
+    #bt3 {
+        font-size: 20px !important;
+        margin-bottom: 0px !important;
+        padding: 8px 8px 8px;
+        font-variant-caps: small-caps;
+        font-family: Mulish;
+    }
+
+    .aboutus #bt3 {
+        padding-left: 10px;
+    }
+
+    .aboutus .box {
+        text-align: center !important;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .aboutus {
+        margin-top: 100%;
+        height: 90vh;
+        position: relative;
+    }
+    .aboutus .heading {
+        margin-left: 0%;
+    }
+    .aboutus .main4 {
+        font-size: 12px !important;
+        font-weight: normal !important;
+    }
+
+    .aboutus #bt1,
+    #bt2,
+    #bt3 {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .aboutus {
+        margin-top: 100%;
+        height: 90vh;
+        position: relative;
+    }
+    .aboutus .about-us {
+        margin-left: 40px;
+    }
+    .aboutus .heading {
+        margin-left: 0%;
+    }
+    .aboutus h2 {
+        text-align: center;
+        font-size: 0.75em;
+    }
+    .aboutus .main4 {
+        font-size: 15px !important;
+        line-height: 105% !important;
+        font-weight: normal !important;
+        text-align: left !important;
+    }
+
+    .aboutus #bt1,
+    #bt2,
+    #bt3 {
+        font-size: 25px !important;
+    }
+}
+
+.aboutus h3 {
+    font-family: "Mulish" !important;
+}
+
+.aboutus .btn:hover {
+    color: #0c8a2f;
+    background-color: #0e0e0e;
+}
+
+.aboutus .btn:focus,
+.aboutus a:focus {
+    color: #0c8a2f;
+    box-shadow: none;
+}
+
+.aboutus .btn:active,
+.aboutus a:active {
+    color: #0c8a2f;
+    box-shadow: none;
+}
+
+.aboutus #bt1 {
+    color: #0c8a2f;
+}
+
+.aboutus #bt1,
+#bt2,
+#bt3 {
+    box-shadow: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    text-transform: none !important;
+    font-variant-caps: small-caps;
+    font-family: Mulish;
+}
+
+.aboutus #bt3 {
+    padding-right: 30px;
+}
+
+.aboutus .main4 {
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 31px;
+    margin: 0;
+}
+
+/* Swiper Js pagination */
+.aboutus .swiper {
+    width: 250px;
+    height: 480px;
+    margin-left: auto;
+}
+
+.aboutus .swiper-slide {
+    text-align: center;
+    font-size: 14px;
+    background: #0e0e0e;
+    color: #ffffff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 801px;
+}
+
+.aboutus .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 60px !important;
+}
+
+.aboutus .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutus .slogan {
+    font-variant-caps: small-caps;
+    font-family: Mulish;
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+    color: #0c8a2f !important;
+}
+
+.aboutus .boundary {
+    border: 2px solid #ffffff;
+    height: 380px;
+    padding: 12px 12px 12px 12px;
+    text-align: justify;
+    border-radius: 8px;
+}
+
+.aboutus .swiper-pagination-bullet {
+    background-color: #ffffff;
+}

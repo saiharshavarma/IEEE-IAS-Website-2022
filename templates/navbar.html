@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="navbar-container">
+    <nav class="scroll-section navbar" id= "Home">
+        <a href="#" class="logo"><img src="{% static 'images/navbar/ias.png' %}" /></a>
+        <ul class="topnav" id="myTopnav">
+            <li><a href="#" class="nav-links Home active">Home</a></li>
+            <li><a href="#About" class="nav-links About">About</a></li>
+            <li><a href="#Domain" class="nav-links Domain">Domain</a></li>
+            <li><a href="#Blogs" class="nav-links Blogs">Blogs</a></li>
+            <li><a href="#Events" class="nav-links Events">Events</a></li>
+            <li><a href="#carouselExampleIndicators" class="nav-links carouselExampleIndicators" id="board-change">Board</a></li>
+            <li><a href="#Contact" class="nav-links Contact">Contact</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="HamburgerToggle()"> <i class="fa fa-bars"></i> </a>
+    </nav>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div> 
+</div>

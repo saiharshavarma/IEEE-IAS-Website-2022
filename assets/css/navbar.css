@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    font-family: "Mulish";
+    background-color: #0e0e0e;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 100vw;
+    position: relative;
+    color: white;
+}
+
+h3 {
+    font-family: "Mulish" !important;
+}
+
+.websiteheading {
+    position: relative !important;
+    text-align: center !important;
+    font-family: "Mulish", sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 55px !important;
+    line-height: 58px !important;
+    /* identical to box height */
+    color: rgba(255, 255, 255) !important;
+}
+
+.navbar a.active{
+    color: rgba(12, 138, 47, 0.97) !important;
+    transition: color 0.5s ease-in-out; 
+}
+
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+    .websiteheading {
+        font-size: 34px !important;
+    }
+}
+
+@media screen and (min-width: 0px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.navbar-container{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #0e0e0e;
+    font-size: 18px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    width: 100%;
+    /* box-shadow: 0px 2px 18px rgba(12, 138, 47, 0.97); */
+}
+
+.navbar .topnav {
+    list-style-type: none;
+    display: none;
+    align-items: center;
+}
+
+.navbar .nav-links,
+.navbar .logo img {
+    text-decoration: none;
+    color: white;
+    height: 4rem;
+}
+
+.navbar .topnav li {
+    text-align: center;
+    margin: 14px auto;
+}
+
+.navbar .logo {
+    display: inline-block;
+    font-size: 22px;
+    margin: 0px 20px;
+}
+
+.navbar .navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+.navbar-container .progress-container {
+    width: 100%;
+    height: 3px;
+    background: #0E0E0E;
+  }
+  
+  /* The progress bar (scroll indicator) */
+ .navbar-container .progress-bar {
+    height: 3px;
+    background: #0C8A2F;
+    width: 0%;
+  }
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    .navbar .topnav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        margin: auto 0px;
+    }
+    .navbar .topnav li {
+        margin: 0;
+    }
+    .navbar .nav-links {
+        margin-left: 40px;
+    }
+    .navbar .logo {
+        margin-top: 0;
+    }
+    .navbar .navbar-toggle {
+        display: none;
+    }
+    .navbar .logo:hover,
+    .navbar .nav-links:hover {
+        color: rgba(12, 138, 47, 0.97);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar a.active{
+        color: white !important;
+    }
+    #Home {
+        position: fixed !important;
+        width: 100%;
+    }
+    .navbar .logo img {
+        height: 3rem !important;
+    }
+    .navbar {
+        flex-direction: column;
+        z-index: 90;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+    .navbar .fa {
+        font-size: 30px;
+        color: white;
+    }
+    .navbar .responsive {
+        display: initial;
+    }
+    .navbar .icon,
+    .navbar .topnav.responsive .icon {
+        display: initial;
+        position: fixed;
+        top: 0;
+        right: 3%;
+        margin: 1rem 0;
+    }
+    .navbar .logo:hover,
+    .navbar .nav-links:hover,
+    .navbar .topnav a.active {
+        background-color: rgba(12, 138, 47, 0.97);
+        align-items: center !important;
+    }
+    .navbar .topnav a:not(:first-child) {
+        display: none;
+    }
+    .navbar .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .navbar .topnav {
+        position: fixed;
+    }
+    .navbar .topnav.responsive {
+        position: fixed;
+        background-color: black;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.9;
+    }
+    .navbar .topnav.responsive a {
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        text-align: center;
+    }
+    .navbar .topnav li {
+        margin: 0;
+    }
+    .navbar {
+        padding-bottom: 0;
+    }
+    .navbar ul:not(.u-unstyled) {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .navbar ul {
+        padding: 0 !important;
+    }
+}
+
+.scrollupbtn{
+    color: #0C8A2F !important;
+    z-index: 10 !important;
+}
+
+#scrollupbtn{
+    display: none;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	background-color: #0E0E0E;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #0E0E0E;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: white;
+}

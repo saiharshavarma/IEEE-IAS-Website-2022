@@ -1,0 +1,61 @@
+.footer .copyright {
+    position: relative;
+    padding: 0px 0;
+    background: #000000;
+}
+
+.footer .copyright .container {
+    padding: 20px;
+}
+
+.footer .copyright .copy-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999;
+}
+
+.footer .copyright .copy-text p a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .copyright .copy-text p a:hover {
+    color: #0c8a2f;
+}
+
+.footer .copyright .copy-menu {
+    position: relative;
+    font-size: 0;
+    text-align: right;
+}
+
+.footer .copyright .copy-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer .copyright .copy-menu a:hover {
+    color: #0c8a2f;
+}
+
+.footer .copyright .copy-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+@media (max-width: 767.98px) {
+    .footer .copyright .copy-text,
+    .footer .copyright .copy-menu {
+        text-align: center;
+    }
+
+    .footer .copyright .copy-text p {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,13 @@
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" id="registration" name="registration" style="color: white;"><br><br>
+    <input type="submit" value="Submit">
+</form> 
+
+{% if result == "Pass" %}
+<div style="background-color: green;">Pass</div>
+{% elif result == "Fail" %}
+<div style="background-color: red;">Fail</div>
+{% elif result == "Invalid" %}
+<div style="background-color: yellow;">Fail</div>
+{% endif %}

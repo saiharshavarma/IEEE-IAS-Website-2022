@@ -1,0 +1,55 @@
+{% load static %}
+
+<div class="scroll-section events" id="Events">
+    <div class="description">
+        <div class="title">
+            <h2 class="websiteheading">EVENTS</h2>
+        </div>
+        <div class="info info1">
+            <p>
+                We conduct numerous technical and industrial workshops and webinars throughout the year consisting of all attainable domains. We tend to conduct these events for others to grow and for us as well. We also organise
+                ideathons to find and enhance the hidden skills in the students. A few of the events we tend to organise are:
+            </p>
+        </div>
+    </div>
+    <div class="events-spinner">
+        <svg class="svg-mask" width="1200px" height="600px" viewBox="0 0 1200 600">
+            <defs>
+                <clipPath id="quarterMask">
+                    <path
+                        d="M299.001,26.649L0,325.65c330.267,330.268,865.736,330.268,1196.004,0L897.003,26.649
+C731.868,191.784,464.136,191.784,299.001,26.649z"
+                    />
+                </clipPath>
+            </defs>
+        </svg>
+        <div class="content">
+            <ul class="featured-slider" id="wheel">
+                <li class="active item item1" data-tab="1">
+                    <div class="image"><img class="t" src="{% static 'images/events/Event1.jpg' %}" alt="" /></div>
+                </li>
+                <li class="item item2" data-tab="2">
+                    <div class="image"><img class="t" src="{% static 'images/events/Event2.jpg' %}" alt="" /></div>
+                </li>
+                <li class="item item3" data-tab="3">
+                    <div class="image"><img class="t" src="{% static 'images/events/Event3.jpg' %}" alt="" /></div>
+                </li>
+                <li class="item item4" data-tab="4">
+                    <div class="image"><img class="t" src="{% static 'images/events/Event4.jpg' %}" alt="" /></div>
+                </li>
+            </ul>
+            <div class="details eImgItem1 active">
+                <a href="https://www.instagram.com/p/CSg9XeFBhOU/" target="_blank" class="button"><img class="event-image" src="{% static 'images/events/Poster1.jpg' %}" /></a>
+            </div>
+            <div class="details eImgItem2">
+                <a href="https://www.instagram.com/p/CHrszqABBW2/" target="_blank" class="button"><img class="event-image" src="{% static 'images/events/Poster2.jpg' %}" /></a>
+            </div>
+            <div class="details eImgItem3">
+                <a href="https://www.instagram.com/p/CLizhZ3Btec/" target="_blank" class="button"><img class="event-image" src="{% static 'images/events/Poster3.jpg' %}" /></a>
+            </div>
+            <div class="details eImgItem4">
+                <a href="https://www.instagram.com/p/CRTIP05LANN/" target="_blank" class="button"><img class="event-image" src="{% static 'images/events/Poster4.jpg' %}" /></a>
+            </div>
+        </div>
+    </div>
+</div>
