@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" action="{% url 'ccsresults' %}">
     {% csrf_token %}
     <input type="text" id="registration" name="registration" style="color: white;"><br><br>
     <input type="submit" value="Submit">
@@ -10,4 +10,6 @@
 <div style="background-color: red;">Fail</div>
 {% elif result == "Invalid" %}
 <div style="background-color: yellow;">Fail</div>
+{% elif result == None %}
+<div></div>
 {% endif %}
