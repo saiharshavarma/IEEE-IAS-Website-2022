@@ -1,5 +1,7 @@
 <div style="color: white;">
-<form method="POST" action="{% url 'register' %}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <h2 id="success" style="color: green"></h2>
+<form id="registration">
     {% csrf_token %}
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br>
@@ -11,4 +13,24 @@
     <input type="text" id="phone" name="phone" required><br><br>
     <input type="submit" value="Submit">
   </form> 
+<script type="text/javascript">
+$(document).on('submit', '#registration', function(e){
+  e.preventDefault();
+  $.ajax({
+    type: 'POST', 
+    url: '/register',
+    data:{
+      name:$('#name').val(),
+      regno:$('#regno').val(),
+      email:$('#email').val(),
+      phone:$('#phone').val(),
+      csrfmiddlewaretoken:$('input[name=csrfmiddleware]').val(),
+      'csrfmiddlewaretoken': '{{ csrf_token }}'
+    },
+    success: function (data){
+      $('#success').html(data)
+    }
+  })
+})
+</script>
 </div>
