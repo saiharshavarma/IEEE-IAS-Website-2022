@@ -28,6 +28,7 @@
                 </div>
                 <div class="modal-body">
                     <form method="POST" action="{% url 'ccsresults' %}">
+                        {% csrf_token %}
                         <input type="text" id="registration" name="registration" style="color: white;"><br><br>
                         <input type="submit" value="Submit">
                     </form> 

@@ -2,6 +2,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <h2 id="success" style="color: green"></h2>
 <form id="registration">
+    {% csrf_token %}
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" required><br>
     <label for="regno">Reg No:</label><br>
