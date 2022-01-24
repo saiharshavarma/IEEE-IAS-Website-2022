@@ -1,1 +1,1 @@
-waitress-serve --port=$PORT IEEEIAS.wsgi:application
+web: waitress-serve --port=$PORT IEEEIAS.wsgi:application
