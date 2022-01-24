@@ -65,6 +65,18 @@
     {% include "home.html" %}
     <!-- Landing Page Ending -->
 
+    {%  include "latestevents.html" %}
+    {% include "ccsresult.html" %}
+    <!-- {% if result == "Pass" %}
+    {% include "pass.html" %}
+    {% elif result == "Fail" %}
+    <div style="background-color: red;">{% include "fail.html" %}</div>
+    {% elif result == "Invalid" %}
+    <div style="background-color: yellow;">Invalid</div>
+    {% elif result == None %}
+    <div></div>
+    {% endif %} -->
+
     <!-- About us Page -->
     {% include "aboutus.html" %}
     <!-- About us Page Ending -->
@@ -88,11 +100,6 @@
     <!-- Contact us Page -->
     {% include "contactus.html" %}
     <!-- Contact us Page Ending -->
-
-    <!-- Checking -->
-    {% include "ccsresult.html" %}
-    {% include "register.html" %}
-    <!-- Checking Ending -->
 
     <!-- Footer -->
     {% include "footer.html" %}

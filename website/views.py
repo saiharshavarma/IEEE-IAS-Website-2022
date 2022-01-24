@@ -44,12 +44,10 @@ def ccsresults(request):
         dataset = pd.DataFrame(dataset)
         if reg in list(dataset['Registration']):
             result = "Pass"
-            return redirect('pass')
         elif reg == "":
             result = "Invalid"
         else:
             result = "Fail"
-            return redirect('fail')
         context = {"result" : result}
         return render(request, "index.html", context)
     else:
