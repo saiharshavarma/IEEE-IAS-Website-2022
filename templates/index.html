@@ -67,7 +67,7 @@
 
     {%  include "latestevents.html" %}
     {% include "ccsresult.html" %}
-    <!-- {% if result == "Pass" %}
+    {% if result == "Pass" %}
     {% include "pass.html" %}
     {% elif result == "Fail" %}
     <div style="background-color: red;">{% include "fail.html" %}</div>
@@ -75,7 +75,7 @@
     <div style="background-color: yellow;">Invalid</div>
     {% elif result == None %}
     <div></div>
-    {% endif %} -->
+    {% endif %}
 
     <!-- About us Page -->
     {% include "aboutus.html" %}
