@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse, request
 from django.views.decorators.csrf import csrf_exempt
+from .models import Hyperlink
 import pandas as pd
 import csv
 
@@ -58,3 +59,11 @@ def success(request):
 
 def fail(request):
     return render(request, 'fail.html')
+
+def google_form(request):
+    hyperlink = Hyperlink.objects.filter(id = 1)[0]
+    return redirect(hyperlink.registration_google_form)
+
+def group_invite(request):
+    hyperlink = Hyperlink.objects.filter(id = 1)[0]
+    return redirect(hyperlink.group_invite_link)
