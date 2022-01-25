@@ -6,22 +6,24 @@ import pandas as pd
 import csv
 
 registrations_file = "CCS Registrations.csv"
+blog = Blog.objects.all()
+event = Event.objects.all()
+hyperlink = Hyperlink.objects.filter(id = 1)[0]
+context = {}
+context["blog1"] = blog[0]
+context["blog2"] = blog[1]
+context["blog3"] = blog[2]
+context["blog4"] = blog[3]
+context["blog5"] = blog[4]
+context["blog6"] = blog[5]
+context["event1"] = event[0]
+context["event2"] = event[1]
+context["event3"] = event[2]
+context["event4"] = event[3]
 
 def home(request):
     result = None
-    blog = Blog.objects.all()
-    event = Event.objects.all()
-    context = {"result" : result}
-    context["blog1"] = blog[0]
-    context["blog2"] = blog[1]
-    context["blog3"] = blog[2]
-    context["blog4"] = blog[3]
-    context["blog5"] = blog[4]
-    context["blog6"] = blog[5]
-    context["event1"] = event[0]
-    context["event2"] = event[1]
-    context["event3"] = event[2]
-    context["event4"] = event[3]
+    context["result"] = result
     return render(request, "index.html", context)
 
 def blogredirect(request, the_slug):
@@ -48,7 +50,7 @@ def register(request):
                 wrt.writerow([name, regno, email, phone])
         else:
             return HttpResponse("User already present")
-        context = {"result" : result}
+        context["result"] = result
         return HttpResponse("Successfully Registered " + name)
     else:
         return redirect('home')
@@ -65,7 +67,7 @@ def ccsresults(request):
             result = "Invalid"
         else:
             result = "Fail"
-        context = {"result" : result}
+        context["result"] = result
         return render(request, "index.html", context)
     else:
         return redirect('home')
@@ -76,10 +78,8 @@ def success(request):
 def fail(request):
     return render(request, 'fail.html')
 
-def google_form(request):
-    hyperlink = Hyperlink.objects.filter(id = 1)[0]
+def google_form(request):    
     return redirect(hyperlink.registration_google_form)
 
 def group_invite(request):
-    hyperlink = Hyperlink.objects.filter(id = 1)[0]
     return redirect(hyperlink.group_invite_link) 

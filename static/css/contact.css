@@ -137,6 +137,10 @@
     width: 42px !important;
 }
 
+.u-section-1 .to-center-it:hover{
+    transform: scale(1.2);
+}
+
 .u-list-item-3{
     padding: 10%;
     height: 250px;
