@@ -6,24 +6,23 @@ import pandas as pd
 import csv
 
 registrations_file = "CCS Registrations.csv"
-blog = Blog.objects.all()
-event = Event.objects.all()
-hyper = Hyperlink.objects.filter(id = 1)[0]
 context = {}
-context["blog1"] = blog[0]
-context["blog2"] = blog[1]
-context["blog3"] = blog[2]
-context["blog4"] = blog[3]
-context["blog5"] = blog[4]
-context["blog6"] = blog[5]
-context["event1"] = event[0]
-context["event2"] = event[1]
-context["event3"] = event[2]
-context["event4"] = event[3]
 
 def home(request):
     result = None
+    blog = Blog.objects.all()
+    event = Event.objects.all()
     context["result"] = result
+    context["blog1"] = blog[0]
+    context["blog2"] = blog[1]
+    context["blog3"] = blog[2]
+    context["blog4"] = blog[3]
+    context["blog5"] = blog[4]
+    context["blog6"] = blog[5]
+    context["event1"] = event[0]
+    context["event2"] = event[1]
+    context["event3"] = event[2]
+    context["event4"] = event[3]
     return render(request, "index.html", context)
 
 def blogredirect(request, the_slug):
@@ -36,6 +35,8 @@ def eventredirect(request, the_slug):
 
 def register(request):
     result = None
+    blog = Blog.objects.all()
+    event = Event.objects.all()
     if request.method == 'POST':
         name = request.POST.get('name')
         regno = request.POST.get('regno')
@@ -51,12 +52,24 @@ def register(request):
         else:
             return HttpResponse("User already present")
         context["result"] = result
+        context["blog1"] = blog[0]
+        context["blog2"] = blog[1]
+        context["blog3"] = blog[2]
+        context["blog4"] = blog[3]
+        context["blog5"] = blog[4]
+        context["blog6"] = blog[5]
+        context["event1"] = event[0]
+        context["event2"] = event[1]
+        context["event3"] = event[2]
+        context["event4"] = event[3]
         return HttpResponse("Successfully Registered " + name)
     else:
         return redirect('home')
 
 def ccsresults(request):
     result = None
+    blog = Blog.objects.all()
+    event = Event.objects.all()
     if request.method == 'POST':
         reg = request.POST.get('registration')
         dataset = pd.read_csv(registrations_file, names=['Name', 'Registration'])
@@ -68,6 +81,16 @@ def ccsresults(request):
         else:
             result = "Fail"
         context["result"] = result
+        context["blog1"] = blog[0]
+        context["blog2"] = blog[1]
+        context["blog3"] = blog[2]
+        context["blog4"] = blog[3]
+        context["blog5"] = blog[4]
+        context["blog6"] = blog[5]
+        context["event1"] = event[0]
+        context["event2"] = event[1]
+        context["event3"] = event[2]
+        context["event4"] = event[3]
         return render(request, "index.html", context)
     else:
         return redirect('home')
@@ -79,7 +102,9 @@ def fail(request):
     return render(request, 'fail.html')
 
 def google_form(request):    
+    hyper = Hyperlink.objects.filter(id = 1)[0]
     return redirect(hyper.registration_google_form)
 
 def group_invite(request):
+    hyper = Hyperlink.objects.filter(id = 1)[0]
     return redirect(hyper.group_invite_link) 
