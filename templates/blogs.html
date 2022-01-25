@@ -14,42 +14,42 @@
                     <div class="round"></div>
                     <div class="dotCircle">
                         <span class="itemDot active itemDot1" data-tab="1">
-                            <img class="blogimages" src="{% static 'images/blogs/Blog1.jpg' %}" />
+                            <img class="blogimages" src="/media/{{ blog1.blog_image }}" />
                         </span>
                         <span class="itemDot itemDot2" data-tab="2">
-                            <img class="blogimages" src="{% static 'images/blogs/Blog2.jpg' %}" />
+                            <img class="blogimages" src="/media/{{ blog2.blog_image }}" />
                         </span>
                         <span class="itemDot itemDot3" data-tab="3">
-                            <img class="blogimages" src="{% static 'images/blogs/Blog3.jpg' %}" />
+                            <img class="blogimages" src="/media/{{ blog3.blog_image }}" />
                         </span>
                         <span class="itemDot itemDot4" data-tab="4">
-                            <img class="blogimages" src="{% static 'images/blogs/Blog4.jpg' %}" />
+                            <img class="blogimages" src="/media/{{ blog4.blog_image }}" />
                         </span>
                         <span class="itemDot itemDot5" data-tab="5">
-                            <img class="blogimages" src="{% static 'images/blogs/Blog2.jpg' %}" />
+                            <img class="blogimages" src="/media/{{ blog5.blog_image }}" />
                         </span>
                         <span class="itemDot itemDot6" data-tab="6">
-                            <img class="blogimages" src="{% static 'images/blogs/Blog3.jpg' %}" />
+                            <img class="blogimages" src="/media/{{ blog6.blog_image }}" />
                         </span>
                     </div>
                     <div class="contentCircle">
                         <div class="CirItem title-box active CirItem1">
-                            <h4 class="title"><a href="https://tinyurl.com/ieeeiasvitmedium" target="_blank" class="blog_title_link">Technology Trends and its Future Perspective</a></h4>
+                            <h4 class="title"><a href="{% url 'blog_redirect' the_slug=blog1.slug %}" target="_blank" class="blog_title_link">{{ blog1.title }}</a></h4>
                         </div>
                         <div class="CirItem title-box CirItem2">
-                            <h4 class="title"><a href="https://bit.ly/3CrHmYk" target="_blank" class="blog_title_link">Is the bonanza of Cryptocurrency bringing distress?</a></h4>
+                            <h4 class="title"><a href="{% url 'blog_redirect' the_slug=blog2.slug %}" target="_blank" class="blog_title_link">{{ blog2.title }}</a></h4>
                         </div>
                         <div class="CirItem title-box CirItem3">
-                            <h4 class="title"><a href="https://tinyurl.com/IEEEIASVIT-Mediumblog" target="_blank" class="blog_title_link">MinionLabs — creator of world’s smallest energy auditor</a></h4>
+                            <h4 class="title"><a href="{% url 'blog_redirect' the_slug=blog3.slug %}" target="_blank" class="blog_title_link">{{ blog3.title }}</a></h4>
                         </div>
                         <div class="CirItem title-box CirItem4">
-                            <h4 class="title"><a href="https://tinyurl.com/ieeeiasmedium-blogIoT" target="_blank" class="blog_title_link">IoT : The future of this Technological era?</a></h4>
+                            <h4 class="title"><a href="{% url 'blog_redirect' the_slug=blog4.slug %}" target="_blank" class="blog_title_link">{{ blog4.title }}</a></h4>
                         </div>
                         <div class="CirItem title-box CirItem5">
-                            <h4 class="title"><a href="https://bit.ly/3CrHmYk" target="_blank" class="blog_title_link">Is the bonanza of Cryptocurrency bringing distress?</a></h4>
+                            <h4 class="title"><a href="{% url 'blog_redirect' the_slug=blog5.slug %}" target="_blank" class="blog_title_link">{{ blog5.title }}</a></h4>
                         </div>
                         <div class="CirItem title-box CirItem6">
-                            <h4 class="title"><a href="https://tinyurl.com/IEEEIASVIT-Mediumblog" target="_blank" class="blog_title_link">MinionLabs — creator of world’s smallest energy auditor</a></h4>
+                            <h4 class="title"><a href="{% url 'blog_redirect' the_slug=blog6.slug %}" target="_blank" class="blog_title_link">{{ blog6.title }}</a></h4>
                         </div>
                     </div>
                 </div>
@@ -57,22 +57,22 @@
         </section>
         <section class="container image-container align-items-center">
             <div class="container ImgItem active ImgItem1">
-                <a href="https://tinyurl.com/ieeeiasvitmedium" target="_blank"><img src="{% static 'images/blogs/Blog1.jpg' %}" /></a>
+                <a href="{% url 'blog_redirect' the_slug=blog1.slug %}" target="_blank"><img src="/media/{{ blog1.blog_image }}" /></a>
             </div>
             <div class="container ImgItem ImgItem2">
-                <a href="https://bit.ly/3CrHmYk" target="_blank"><img src="{% static 'images/blogs/Blog2.jpg' %}" /></a>
+                <a href="{% url 'blog_redirect' the_slug=blog2.slug %}" target="_blank"><img src="/media/{{ blog2.blog_image }}" /></a>
             </div>
             <div class="container ImgItem ImgItem3">
-                <a href="https://tinyurl.com/IEEEIASVIT-Mediumblog" target="_blank"><img src="{% static 'images/blogs/Blog3.jpg' %}" /></a>
+                <a href="{% url 'blog_redirect' the_slug=blog3.slug %}" target="_blank"><img src="/media/{{ blog3.blog_image }}" /></a>
             </div>
             <div class="container ImgItem ImgItem4">
-                <a href="https://tinyurl.com/ieeeiasmedium-blogIoT" target="_blank"><img src="{% static 'images/blogs/Blog4.jpg' %}" /></a>
+                <a href="{% url 'blog_redirect' the_slug=blog4.slug %}" target="_blank"><img src="/media/{{ blog4.blog_image }}" /></a>
             </div>
             <div class="container ImgItem ImgItem5">
-                <a href="https://bit.ly/3CrHmYk" target="_blank"><img src="{% static 'images/blogs/Blog2.jpg' %}" /></a>
+                <a href="{% url 'blog_redirect' the_slug=blog5.slug %}" target="_blank"><img src="/media/{{ blog5.blog_image }}" /></a>
             </div>
             <div class="container ImgItem ImgItem6">
-                <a href="https://tinyurl.com/IEEEIASVIT-Mediumblog" target="_blank"><img src="{% static 'images/blogs/Blog3.jpg' %}" /></a>
+                <a href="{% url 'blog_redirect' the_slug=blog6.slug %}" target="_blank"><img src="/media/{{ blog6.blog_image }}" /></a>
             </div>
         </section>
     </div>

@@ -1,20 +1,28 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse, request
-#from django.views.decorators.csrf import csrf_exempt
-from .models import Hyperlink
+from .models import Hyperlink, Blog, Event
 import pandas as pd
 import csv
 
 registrations_file = "CCS Registrations.csv"
 
-#@csrf_exempt
 def home(request):
     result = None
+    blog = Blog.objects.all()
     context = {"result" : result}
+    context["blog1"] = blog[0]
+    context["blog2"] = blog[1]
+    context["blog3"] = blog[2]
+    context["blog4"] = blog[3]
+    context["blog5"] = blog[4]
+    context["blog6"] = blog[5]
     return render(request, "index.html", context)
 
-#@csrf_exempt
+def blogredirect(request, the_slug):
+    blog = Blog.objects.filter(slug = the_slug)[0]
+    return redirect(blog.link) 
+
 def register(request):
     result = None
     if request.method == 'POST':
@@ -36,7 +44,6 @@ def register(request):
     else:
         return redirect('home')
 
-#@csrf_exempt
 def ccsresults(request):
     result = None
     if request.method == 'POST':
