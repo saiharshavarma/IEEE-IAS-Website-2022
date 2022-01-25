@@ -8,7 +8,7 @@ import csv
 registrations_file = "CCS Registrations.csv"
 blog = Blog.objects.all()
 event = Event.objects.all()
-hyperlink = Hyperlink.objects.filter(id = 1)[0]
+hyper = Hyperlink.objects.filter(id = 1)[0]
 context = {}
 context["blog1"] = blog[0]
 context["blog2"] = blog[1]
@@ -79,7 +79,7 @@ def fail(request):
     return render(request, 'fail.html')
 
 def google_form(request):    
-    return redirect(hyperlink.registration_google_form)
+    return redirect(hyper.registration_google_form)
 
 def group_invite(request):
-    return redirect(hyperlink.group_invite_link) 
+    return redirect(hyper.group_invite_link) 
