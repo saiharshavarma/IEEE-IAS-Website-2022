@@ -10,6 +10,7 @@ registrations_file = "CCS Registrations.csv"
 def home(request):
     result = None
     blog = Blog.objects.all()
+    event = Event.objects.all()
     context = {"result" : result}
     context["blog1"] = blog[0]
     context["blog2"] = blog[1]
@@ -17,11 +18,19 @@ def home(request):
     context["blog4"] = blog[3]
     context["blog5"] = blog[4]
     context["blog6"] = blog[5]
+    context["event1"] = event[0]
+    context["event2"] = event[1]
+    context["event3"] = event[2]
+    context["event4"] = event[3]
     return render(request, "index.html", context)
 
 def blogredirect(request, the_slug):
     blog = Blog.objects.filter(slug = the_slug)[0]
     return redirect(blog.link) 
+
+def eventredirect(request, the_slug):
+    event = Event.objects.filter(slug = the_slug)[0]
+    return redirect(event.link) 
 
 def register(request):
     result = None

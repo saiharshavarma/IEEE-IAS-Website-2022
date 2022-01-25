@@ -26,6 +26,7 @@ class Event(models.Model):
     title = models.TextField()
     event_name = models.ImageField(upload_to= 'event_name')
     event_poster = models.ImageField(upload_to= 'event_poster')
+    link = models.TextField()
     slug = models.SlugField(max_length=264, unique=True, editable=False, default='')
 
     def __str__(self):
