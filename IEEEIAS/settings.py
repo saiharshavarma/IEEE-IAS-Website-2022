@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x5hz_$0aqgll^4th%9dek0_ote)89jt9f314my20=gm9+fpz-=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://ieeeiasvit.herokuapp.com/", "localhost"]
+ALLOWED_HOSTS = ["www.ieeeiasvit.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -127,4 +127,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS=["https://ieeeiasvit.herokuapp.com/"]
+CSRF_TRUSTED_ORIGINS=["https://ieeeiasvit.herokuapp.com"]
