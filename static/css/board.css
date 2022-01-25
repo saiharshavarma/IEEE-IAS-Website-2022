@@ -54,6 +54,19 @@
     border-radius: 10px;
 }
 
+.faculty{
+    width:800px;
+    height: 200px;
+    border: solid green;
+    padding: 10px 0;
+    margin: 40px 20px 0px 20px;
+    border-radius:20px;
+}
+
+.faculty-text{
+    margin: auto 0;
+}
+
 .board .container .newcard {
     width: 200px;
     height: 280px;
