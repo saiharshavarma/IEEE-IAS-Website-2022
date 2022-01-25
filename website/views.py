@@ -1,21 +1,20 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse, request
-from django.views.decorators.csrf import csrf_exempt
+#from django.views.decorators.csrf import csrf_exempt
+from .models import Hyperlink
 import pandas as pd
 import csv
 
 registrations_file = "CCS Registrations.csv"
-registration_google_form = "https://www.google.com/"
-group_invite_link = "https://discord.com/"
 
-@csrf_exempt
+#@csrf_exempt
 def home(request):
     result = None
     context = {"result" : result}
     return render(request, "index.html", context)
 
-@csrf_exempt
+#@csrf_exempt
 def register(request):
     result = None
     if request.method == 'POST':
@@ -37,7 +36,7 @@ def register(request):
     else:
         return redirect('home')
 
-@csrf_exempt
+#@csrf_exempt
 def ccsresults(request):
     result = None
     if request.method == 'POST':
@@ -62,7 +61,9 @@ def fail(request):
     return render(request, 'fail.html')
 
 def google_form(request):
-    return redirect(registration_google_form)
+    hyperlink = Hyperlink.objects.filter(id = 1)[0]
+    return redirect(hyperlink.registration_google_form)
 
 def group_invite(request):
-    return redirect(group_invite_link)
+    hyperlink = Hyperlink.objects.filter(id = 1)[0]
+    return redirect(hyperlink.group_invite_link) 
