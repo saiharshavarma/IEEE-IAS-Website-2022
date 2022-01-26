@@ -25,10 +25,14 @@
     display: none;
 }
 
-.mboard .row{
+.mboard .row {
     justify-content: space-between;
 }
 
+.mboard h3 {
+    margin: 0px !important;
+    line-height: 1 !important;
+}
 
 .mboard .btn:hover {
     color: #0c8a2f;
@@ -47,12 +51,12 @@
     box-shadow: none;
 }
 
-.mboard #boardbt1 {
+.mboard #boardbtn1 {
     color: #0c8a2f;
 }
 
-.mboard #boardbt1,
-#boardbt2 {
+.mboard #boardbtn1,
+#boardbtn2{
     box-shadow: none;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -65,16 +69,11 @@
     font-family: Mulish;
 }
 
-.mboard h3 {
-    margin: 0px !important;
-    line-height: 1 !important;
-}
-
-#board21 {
+#M-Board21 {
     display: block;
 }
 
-#board22 {
+#M-Board22 {
     display: none;
 }
 
@@ -128,10 +127,24 @@
 }
 
 .board .container .newcard {
+    width: 200px;
+    height: 280px;
     margin: 5px;
+    box-shadow: 0px 4px 20px 30px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e0e0e;
+    border-radius: 10px;
+    transform: scale(0.9);
 }
 
 .board .container .card:hover {
+    background-color: #181818;
+    transform: scale(1.0);
+}
+
+.board .container .newcard:hover{
     background-color: #181818;
     transform: scale(1.0);
 }
