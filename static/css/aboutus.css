@@ -26,7 +26,7 @@
 
 .aboutus #pop {
     text-align: justify;
-    padding: 0 9% 0 7.8%;
+    padding: 0 5% 0 5%;
     font-size: 22px;
     font-weight: 400;
     font-style: normal;
@@ -65,7 +65,8 @@
 
     .aboutus #bt1,
     #bt2,
-    #bt3 {
+    #bt3,
+    #bt4 {
         font-size: 20px !important;
         margin-bottom: 0px !important;
         padding: 8px 8px 8px;
@@ -99,7 +100,8 @@
 
     .aboutus #bt1,
     #bt2,
-    #bt3 {
+    #bt3,
+    #bt4 {
         font-size: 20px !important;
     }
 }
@@ -129,7 +131,8 @@
 
     .aboutus #bt1,
     #bt2,
-    #bt3 {
+    #bt3,
+    #bt4 {
         font-size: 25px !important;
     }
 }
@@ -161,7 +164,8 @@
 
 .aboutus #bt1,
 #bt2,
-#bt3 {
+#bt3,
+#bt4 {
     box-shadow: none;
     padding-top: 10px;
     padding-bottom: 10px;

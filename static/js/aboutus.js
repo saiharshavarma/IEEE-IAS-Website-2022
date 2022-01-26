@@ -24,17 +24,27 @@ if (screen.width > 430) {
                 "<p>IEEE IAS vision lies in the advancement of technology linking theory and practice in the application of electrical and electronic systems for the benefit of humanity. We value the sharing of knowledge in our domains and the professional development of our membership.</p>";
         })
     );
+
+    document.getElementById("bt4").addEventListener(
+        "click",
+        (function3 = () => {
+            document.querySelector("#pop").innerHTML =
+                "<p>Vellore Institute of Technology is a private university, located in Vellore, Tamil Nadu. The international standards set by VIT in the fields of education and research motivate us to keep striving for greatness. The institution promotes Clubs and chapters through the Students' Welfare. For the upliftment of students, the Students' Welfare collaborates with clubs and chapters to give a platform where they can learn and grow together. The Department is in charge of a slew of activities aimed at helping students.</p>";
+        })
+    );
 } else {
     document.getElementById("pop").remove();
     document.getElementById("bt1").remove();
     document.getElementById("bt2").remove();
     document.getElementById("bt3").remove();
+    document.getElementById("bt4").remove();
 }
 
 function ColorChange(element) {
     document.getElementById("bt1").style.color = "#FFF";
     document.getElementById("bt2").style.color = "#FFF";
     document.getElementById("bt3").style.color = "#FFF";
+    document.getElementById("bt4").style.color = "#FFF";
 
     element.style.color = "#0c8a2f";
 }
