@@ -52,7 +52,7 @@
     box-shadow: none;
 }
 
-.mboard #boardbtn1 {
+.mboard #boardbtn2 {
     color: #0c8a2f;
 }
 
@@ -71,11 +71,11 @@
 }
 
 #M-Board21 {
-    display: block;
+    display: none;
 }
 
 #M-Board22 {
-    display: none;
+    display: block;
 }
 
 .boardhead {
