@@ -8,10 +8,10 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="techi">
                             <h3 id="text"  
-                            onclick= "store_n(1); checkForChanges()"    
+                            onclick= "StopScroll();"    
                             class="btn btn-primary"
                             data-toggle="modal"
-                            data-target="#exampleModal10">CCS Results</h3>
+                            data-target="#ccs">CCS Results</h3>
                         </div>
                     </div>
                 </div>
@@ -19,12 +19,12 @@
         </div>
     </div>
     <!-- Modal 1-->
-    <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ccs" tabindex="-1" role="dialog" aria-labelledby="ccslabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content green-border" id="mc-1" style="width: 100%;">
                 <div class="modal-header">
-                    <div class="icon-container"><img class="modal-title sizze" id="exampleModalLabel" src="{% static 'images/domain/Group 136.svg' %}" alt="#" /></div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;" onclick= "RestoreScroll()"><span class="character-entity" aria-hidden="true">&times;</span></button>
+                    <div class="icon-container"><img class="modal-title sizze" id="ccslabel" src="{% static 'images/domain/Group 136.svg' %}" alt="#" /></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;" onclick= "RestoreScroll();"><span class="character-entity" aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form method="POST" action="{% url 'ccsresults' %}">
