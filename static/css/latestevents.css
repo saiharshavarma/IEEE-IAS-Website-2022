@@ -1,0 +1,188 @@
+ .event_head .mheading {
+     color: #fffdfd;
+     font-style: normal;
+     font-family: "Mulish", sans-serif;
+     margin-left: 10%;
+     position: relative;
+     top: 80px;
+     font-size: 3rem;
+     font-weight: 900;
+ }
+
+ .event_head .nheading {
+     color: #0c8a2f;
+     margin-left: 13%;
+     font-size: 1.5rem;
+     font-weight: 500;
+     font-family: "Mulish", sans-serif;
+     position: relative;
+     top: 85px;
+
+
+ }
+
+ .event_container {
+     color: white;
+     margin: 0 auto;
+     text-align: right;
+     position: relative;
+     top: -100px;
+     margin-right: 15%;
+
+ }
+
+
+
+ .li_event {
+     display: inline-block;
+     font-size: 1.2em;
+     list-style-type: none;
+     padding: 1em;
+     text-transform: uppercase;
+ }
+
+ .li_event span {
+     display: block;
+     font-size: 2.8rem;
+ }
+
+ .event_container h1 {
+     color: #0c8a2f;
+
+
+ }
+
+ .event_btn {
+     text-align: right;
+     margin-right: 25%;
+     position: relative;
+     top: -130px;
+ }
+
+ .latest_btn {
+     box-sizing: border-box;
+     appearance: none;
+     background-color: transparent;
+     border: 2px solid #0c8a2f;
+     border-radius: 0.4em;
+     padding: 8px;
+     width: 200px;
+     font-size: 1.8rem;
+     margin: 20px;
+     color: #0c8a2f;
+ }
+
+
+
+ .discord {
+     box-sizing: border-box;
+     background-color: #0c8a2f;
+     border: 2px solid #0c8a2f;
+     border-radius: 0.4em;
+     padding: 8px;
+     width: 200px;
+     font-size: 1.8rem;
+     margin: 20px;
+     color: black;
+ }
+
+ .event_btn1 {
+     text-align: right;
+     margin-right: 10%;
+     position: relative;
+     top: -235px;
+ }
+
+ @media screen and (max-width: 576px) {
+     .event_head .mheading {
+         color: #fffdfd;
+         font-style: normal;
+         font-family: "Mulish", sans-serif;
+         margin-left: 17%;
+         position: relative;
+         top: 280px;
+         font-size: 2rem;
+         font-weight: 900;
+     }
+
+     .event_head .nheading {
+         color: #0c8a2f;
+         margin-left: 22%;
+         font-size: 1.1rem;
+         font-weight: 500;
+         font-family: "Mulish", sans-serif;
+         position: relative;
+         top: 285px;
+
+
+     }
+
+     .event_container {
+         color: white;
+         margin: 0 auto;
+         text-align: center;
+         position: relative;
+         top: 300px;
+         margin-right: 15%;
+
+     }
+
+     .li_event {
+         display: inline-block;
+         font-size: 0.8em;
+         list-style-type: none;
+         padding: 1em;
+         text-transform: uppercase;
+     }
+
+     .li_event span {
+         display: block;
+         font-size: 1.5rem;
+     }
+
+     .event_btn {
+         position: relative;
+         top: 270px;
+         left: 30px;
+         text-align: left;
+
+     }
+
+     .latest_btn {
+         box-sizing: border-box;
+         appearance: none;
+         background-color: transparent;
+         border: 2px solid #0c8a2f;
+         border-radius: 0.4em;
+         padding: 8px;
+         width: 120px;
+         font-size: 1rem;
+         margin: 20px;
+         color: #0c8a2f;
+     }
+
+
+
+     .discord {
+         box-sizing: border-box;
+         background-color: #0c8a2f;
+         border: 2px solid #0c8a2f;
+         border-radius: 0.4em;
+         padding: 8px;
+         width: 120px;
+         font-size: 1rem;
+         margin: 20px;
+         color: black;
+     }
+
+     .event_btn1 {
+         text-align: right;
+
+         position: relative;
+         top: 185px;
+     }
+
+
+
+
+ }
