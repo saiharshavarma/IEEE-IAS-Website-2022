@@ -1,31 +1,32 @@
- <div class="event_head">
-        <h1 class="mheading">TechTantra 1.O</h1>
-        <h4 class="nheading">5th & 6th Feb 2022</h4>
 
+{% load static %}
+
+<div class="container event_container">
+  <div class="event_head">
+    <h1 class="mheading">TechTantra 1.O</h1>
+    <h4 class="nheading">5th & 6th Feb 2022</h4>
+  </div>
+  <div class="event_right_container">
+    <h1 id="headline" style="font-size:2rem; font-weight:800;  margin-top: 1%;"></h1>
+    <div id="countdown">
+      <ul>
+        <li class="li_event"><span id="days"></span>Days</li>
+        <li class="li_event"><span id="hours"></span>Hrs</li>
+        <li class="li_event"><span id="minutes"></span>Mins</li>
+        <li class="li_event"><span id="seconds"></span>Secs</li>
+      </ul>
     </div>
-    <div class="event_container">
-        <h1 id="headline" style="font-size:2rem; font-weight:800;  margin-top: 1%;"></h1>
-        <div id="countdown">
-          <ul>
-            <li class="li_event"><span id="days"></span>Days</li>
-            <li class="li_event"><span id="hours"></span>Hrs</li>
-            <li class="li_event"><span id="minutes"></span>Mins</li>
-            <li class="li_event"><span id="seconds"></span>Secs</li>
-          </ul>
-        </div>
-      </div>
+    <div class="button-box">
       <div class="event_btn">
-        <a href="">
-            <button class="latest_btn">
-                REGISTER
-            </button>
+        <a href="{% url 'google_form' %}" target="_blank">
+            <button class="latest_btn">REGISTER</button>
         </a>
       </div>
       <div class="event_btn1">
-        <a href="">
-            <button class="discord"><i class="fab fa-discord"></i>
-                DISCORD
-            </button>
+        <a href="{% url 'group_invite' %}" target="_blank">
+            <button class="discord"><i class="fab fa-discord"></i>DISCORD</button>
         </a>
       </div>
-       
+    </div>
+  </div>
+</div>

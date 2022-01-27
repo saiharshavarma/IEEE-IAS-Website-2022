@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="{% static 'css/preloader.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/latestevents.css' %}" />
     <link rel="stylesheet" href="{% static 'css/aboutus.css' %}" />
     <link rel="stylesheet" href="{% static 'css/domain.css' %}" />
     <link rel="stylesheet" href="{% static 'css/blogs.css' %}" />
@@ -65,17 +66,9 @@
     {% include "home.html" %}
     <!-- Landing Page Ending -->
 
+    <!-- Latest Event Page -->
     {%  include "latestevents.html" %}
-    {% include "ccsresult.html" %}
-    {% if result == "Pass" %}
-    {% include "pass.html" %}
-    {% elif result == "Fail" %}
-    <div style="background-color: red;">{% include "fail.html" %}</div>
-    {% elif result == "Invalid" %}
-    <div style="background-color: yellow;">Invalid</div>
-    {% elif result == None %}
-    <div></div>
-    {% endif %}
+    <!-- Latest Event Page Ending -->
 
     <!-- About us Page -->
     {% include "aboutus.html" %}
@@ -163,6 +156,7 @@
     <script src="{% static 'js/preloader.js' %}"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
     <script src="{% static 'js/homepage.js' %}"></script>
+    <script src="{% static 'js/latestevents.js' %}"></script>
     <script src="{% static 'js/aboutus.js' %}"></script>
     <script src="{% static 'js/domain.js' %}"></script>
     <script src="{% static 'js/blogs.js' %}"></script>

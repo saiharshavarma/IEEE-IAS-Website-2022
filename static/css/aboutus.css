@@ -39,7 +39,6 @@
 
 @media screen and (max-width: 430px) {
     .aboutus {
-        margin-top: 100%;
         height: 90vh;
         position: relative;
     }
@@ -86,7 +85,6 @@
 
 @media screen and (max-width: 576px) {
     .aboutus {
-        margin-top: 100%;
         height: 90vh;
         position: relative;
     }
@@ -108,7 +106,6 @@
 
 @media screen and (max-width: 788px) {
     .aboutus {
-        margin-top: 100%;
         height: 90vh;
         position: relative;
     }
