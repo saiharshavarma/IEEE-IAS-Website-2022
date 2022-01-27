@@ -5,6 +5,7 @@
           day = hour * 24;
    
     let offer= "Feb 5, 2022 17:00:00",
+    // let offer= "Jan 2, 2022 17:00:00",
         countDown = new Date(offer).getTime(),
         x = setInterval(function() {    
    
@@ -15,28 +16,24 @@
             document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-             if (distance < 0) {
-          
-            let headline = document.getElementById("headline"),
-                pak  = document.getElementById("pak"),
-                pak2  = document.getElementById("pak2"),
-                countdown = document.getElementById("countdown"),
-                content = document.getElementById("content");
-                
-               
-   
-            headline.innerText = "EVENT IS LIVE NOW!!!";
-            
-            countdown.style.display = "none";
-            pak.style.display = "none";
-            pak2.style.display = "none";
-            content.style.display = "block";   
-                
-   
-            clearInterval(x);
-          }
-   
-          
+            if (distance < 0) {
+
+              let headline = document.getElementById("headline"),
+                  button_box  = document.getElementById("button-box"),
+                  countdown = document.getElementById("countdown"),
+                  content = document.getElementById("content");
+  
+  
+  
+              headline.innerText = "EVENT IS LIVE NOW!!!";
+  
+              countdown.style.display = "none";
+              button_box.style.display = "none";
+              content.style.display = "block";   
+  
+  
+              clearInterval(x);
+            }
           
          
         }, 0)
