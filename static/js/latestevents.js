@@ -15,6 +15,26 @@
             document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+             if (distance < 0) {
+          
+            let headline = document.getElementById("headline"),
+                pak  = document.getElementById("pak"),
+                pak2  = document.getElementById("pak2"),
+                countdown = document.getElementById("countdown"),
+                content = document.getElementById("content");
+                
+               
+   
+            headline.innerText = "EVENT IS LIVE NOW!!!";
+            
+            countdown.style.display = "none";
+            pak.style.display = "none";
+            pak2.style.display = "none";
+            content.style.display = "block";   
+                
+   
+            clearInterval(x);
+          }
    
           
           
