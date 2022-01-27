@@ -17,17 +17,7 @@
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
    
           
-          if (distance < 0) {
-            let headline = document.getElementById("headline"),
-                countdown = document.getElementById("countdown"),
-                content = document.getElementById("content");
-   
-            headline.innerText = "EVENT IS LIVE NOW!!!";
-            countdown.style.display = "none";
-            content.style.display = "block";
-   
-            clearInterval(x);
-          }
-          //seconds
+          
+         
         }, 0)
     }());
