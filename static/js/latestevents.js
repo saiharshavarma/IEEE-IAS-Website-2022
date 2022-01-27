@@ -4,8 +4,8 @@
           hour = minute * 60,
           day = hour * 24;
    
-    // let offer= "Feb 5, 2022 17:00:00",
-    let offer= "Jan 2, 2022 17:00:00",
+    let offer= "Feb 5, 2022 17:00:00",
+    // let offer= "Jan 2, 2022 17:00:00",
         countDown = new Date(offer).getTime(),
         x = setInterval(function() {    
    
