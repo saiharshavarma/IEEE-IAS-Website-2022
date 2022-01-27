@@ -4,8 +4,8 @@
           hour = minute * 60,
           day = hour * 24;
    
-    let offer= "Feb 5, 2022 17:00:00",
-    // let offer= "Jan 2, 2022 17:00:00",
+    // let offer= "Feb 5, 2022 17:00:00",
+    let offer= "Jan 2, 2022 17:00:00",
         countDown = new Date(offer).getTime(),
         x = setInterval(function() {    
    
@@ -19,7 +19,7 @@
             if (distance < 0) {
 
               let headline = document.getElementById("headline"),
-                  button_box  = document.getElementById("button-box"),
+                  pak  = document.getElementById("pak"),
                   countdown = document.getElementById("countdown"),
                   content = document.getElementById("content");
   
@@ -28,7 +28,7 @@
               headline.innerText = "EVENT IS LIVE NOW!!!";
   
               countdown.style.display = "none";
-              button_box.style.display = "none";
+              pak.style.display = "none";
               content.style.display = "block";   
   
   
