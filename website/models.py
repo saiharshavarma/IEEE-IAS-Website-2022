@@ -4,9 +4,7 @@ from django.utils.text import slugify
 
 # Create your models here.
 class Hyperlink(models.Model):
-    Field_1_name = models.TextField()
     registration_google_form = models.TextField()
-    Field_2_name = models.TextField()
     group_invite_link = models.TextField()
 
 class Blog(models.Model):
