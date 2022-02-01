@@ -33,6 +33,10 @@
      position: relative;
  }
 
+ #countdown ul {
+    padding-left: 0px !important;
+}
+
  .li_event {
      display: inline-block;
      font-size: 1.2em;

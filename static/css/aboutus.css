@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 430px) {
     .aboutus {
-        height: 90vh;
+        height: 70vh;
         position: relative;
     }
     .aboutus .heading {
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 576px) {
     .aboutus {
-        height: 90vh;
+        height: 70vh;
         position: relative;
     }
     .aboutus .heading {
@@ -106,7 +106,7 @@
 
 @media screen and (max-width: 788px) {
     .aboutus {
-        height: 90vh;
+        height: 70vh;
         position: relative;
     }
     .aboutus .about-us {
