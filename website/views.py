@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
 from django.http import HttpResponse, request
+from json import dumps
 from .models import Hyperlink, Blog, Event
 import pandas as pd
 import csv
@@ -68,19 +68,31 @@ def register(request):
 
 def ccsresults(request):
     result = None
+    f_name = None
+    f_reg = None
     blog = Blog.objects.all()
     event = Event.objects.all()
     if request.method == 'POST':
-        reg = request.POST.get('registration')
-        dataset = pd.read_csv(registrations_file, names=['Name', 'Registration'])
-        dataset = pd.DataFrame(dataset)
-        if reg in list(dataset['Registration']):
-            result = "Pass"
-        elif reg == "":
+        reg = (request.POST.get('registration')).upper()
+        dataset = open("CCS Registrations.csv", "r")
+        reader = csv.DictReader(dataset)
+        if reg == "":
             result = "Invalid"
         else:
-            result = "Fail"
-        context["result"] = result
+            for row in reader:
+                if reg in row['Registration']:
+                    result = "Pass"
+                    f_name = row['Name']
+                    f_reg = row['Registration']
+                    break
+                else:
+                    result = "Fail"
+        
+        student_details = {'result': result,
+            'name': f_name,
+            'reg': f_reg
+        }
+        student_details = dumps(student_details)
         context["blog1"] = blog[0]
         context["blog2"] = blog[1]
         context["blog3"] = blog[2]
@@ -91,15 +103,11 @@ def ccsresults(request):
         context["event2"] = event[1]
         context["event3"] = event[2]
         context["event4"] = event[3]
-        return render(request, "index.html", context)
+        print(result)
+        return HttpResponse(student_details)
+        #return render(request, "index.html", context)
     else:
         return redirect('home')
-
-def success(request):
-    return render(request, 'pass.html')
-
-def fail(request):
-    return render(request, 'fail.html')
 
 def google_form(request):    
     hyper = Hyperlink.objects.filter(id = 1)[0]

@@ -1,39 +1,117 @@
 {% load static %}
 
-<div class="scroll-section domain">
-    <div id="content-desktop">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-12 col-md-8 row">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="techi">
-                            <h3 id="text"  
-                            onclick= "StopScroll();"    
-                            class="btn btn-primary"
-                            data-toggle="modal"
-                            data-target="#ccs">CCS Results</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="container event_container" id="event_container">
+    <div class="event_head">
+      <!-- <h1 class="mheading">Core Committee Selections!!</h1>
+      <h4 class="nheading">Results are Out!!!</h4> -->
+      <h1 class="mheading">CORE COMMITTEE<br> SELECTIONS!!</h1>  
     </div>
+    <div class="event_right_container">
+      <h1 id="headline1" style="font-size:1.5rem; font-weight:800;  margin-top: 1%; color: white;"></h1>
+      <h1 id="headline2" style="font-size:1.5rem; font-weight:800;  margin-top: 1%;"></h1>
+      <div class="button-box" id="button-box">
+        <div class="event_btn" id="pak">
+            <button class="latest_btn" onclick= "StopScroll();"    
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#ccs">Results</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+<div class="scroll-section domain">
     <!-- Modal 1-->
     <div class="modal fade" id="ccs" tabindex="-1" role="dialog" aria-labelledby="ccslabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" role="document" style="width: 100%;">
             <div class="modal-content green-border" id="mc-1" style="width: 100%;">
                 <div class="modal-header">
-                    <div class="icon-container"><img class="modal-title sizze" id="ccslabel" src="{% static 'images/domain/Group 136.svg' %}" alt="#" /></div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;" onclick= "RestoreScroll();"><span class="character-entity" aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;" onclick= "RestoreScrollccs();"><span class="character-entity" aria-hidden="true">&times;</span></button>
                 </div>
-                <div class="modal-body">
-                    <form method="POST" action="{% url 'ccsresults' %}">
-                        {% csrf_token %}
-                        <input type="text" id="registration" name="registration" style="color: white;"><br><br>
-                        <input type="submit" value="Submit">
-                    </form> 
+                <div class="pass_result" id="pass_result" style="display: none;">
+                  <div class="modal-body">
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: darkgreen; ">
+                          <h1 style="font-weight: 900; font-size: 1.6rem;">CONGRATULATIONS!!!</h1>                       
+                      </div>
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: darkgreen; ">                        
+                          <h4 style="font-weight: 700; font-size: 1.2rem; line-height: 1px;" id="details"></h4>
+                      </div>
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: white ">                        
+                          <h4 style="font-weight: 900; font-size: 1.5rem; ">Welcome to IEEE-IAS family</h4>
+                      </div>
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: darkgreen; ">                        
+                          <h5 style="font-weight: 700; font-size: 0.8rem; line-height: 1px;">Check out our <a href="https://www.instagram.com/ieeeiasvit/?hl=en" style="color: darkgreen;">instagram page</a> for more details.</h5>
+                      </div>
+                  </div>
+                </div>
+                <div class="fail_result" id="fail_result" style="display: none;">
+                  <div class="modal-body">
+                      
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: darkgreen; ">                        
+                          <p style="font-weight: 700; font-size: 1.2rem; line-height: 1px;">Thank You for applying for our chapter.</p>
+                      </div>
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: darkgreen; ">                        
+                          <p class="1st" style="font-weight: 700; font-size: 1.2rem; line-height: 1px;">Unfortunately you couldn't make it.</p>
+                      </div>
+                      <div class="center-heading" style=" display:flex;justify-content: center; color: white ">                        
+                          <h4 style="font-weight: 900; font-size: 1.5rem; ">Better luck next time</h4>
+                      </div>
+                  </div>
+                </div>
+                <div class="modal-body" id="checking">
+                    <form id="formccs">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <br><label for="name" style="color:darkgreen; font-weight: 900;  font-size: 1.3rem;">FULL NAME</label>
+                        <input class="form-control input-sm" id="name" name="name" type="text" placeholder="Enter Your name" style="color:white;font-weight: 800;border: solid 2px darkgreen; ">
+                      </div>
+                       <div class="form-group">
+                        <label for="registration" style="color:darkgreen; font-weight: 900;  font-size: 1.3rem;">REGISTRATION NUMBER</label>
+                        <input class="form-control" id="registration" name="registration" type="text" placeholder="Enter Your registration number" style="color:white;font-weight: 800;border: solid 2px darkgreen;">
+                      </div>
+                      <br><div class="result_btn" style=" display:flex;justify-content: center; ">
+                          <br><input type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2r">
+                      </div>
+                  </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).on('submit', '#formccs', function(e){
+      e.preventDefault();
+      $.ajax({
+        type: 'POST', 
+        url: '/ccsresults',
+        data:{
+          name:$('#name').val(),
+          registration:$('#registration').val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddleware]').val(),
+          'csrfmiddlewaretoken': '{{ csrf_token }}'
+        },
+        success: function(data){
+          const text = data
+          const obj = JSON.parse(text);
+          document.getElementById("checking").style.display = "none";
+          if (obj.result == "Pass") {
+            document.getElementById("pass_result").style.display = "block";
+            document.getElementById("details").innerHTML = obj.name + " / " + obj.reg;
+          }
+          else if (obj.result == "Fail") {
+            document.getElementById("fail_result").style.display = "block";
+          }
+        }
+      })
+    })
+    function RestoreScrollccs(){        
+        document.querySelector('html').style.overflowY= "auto";
+        document.getElementById("pass_result").style.display = "none";
+        document.getElementById("fail_result").style.display = "none";
+        document.getElementById("checking").style.display = "block";
+    }
+</script>
