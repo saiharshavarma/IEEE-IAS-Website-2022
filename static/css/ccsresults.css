@@ -135,7 +135,6 @@
     background-color: #0E0E0E;
     border: solid 2px darkgreen;
     box-shadow: 0px 0px 20px darkgreen;
-
 }
 
 
@@ -241,5 +240,8 @@
 
     .modal-body .center-heading p {
         font-size: 1.1rem !important;
+    }
+    .mmodal-dialog{
+        width: 90% !important;
     }
 }
