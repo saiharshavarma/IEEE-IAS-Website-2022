@@ -4,6 +4,7 @@ from json import dumps
 from .models import Hyperlink, Blog, Event
 import pandas as pd
 import csv
+import re
 
 registrations_file = "CCS Registrations.csv"
 context = {}
@@ -42,7 +43,6 @@ def register(request):
         regno = request.POST.get('regno')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
-        print("in")
         dataset = pd.read_csv(registrations_file, names=['Name', 'Registration'])
         dataset = pd.DataFrame(dataset)
         if regno not in list(dataset['Registration']):
@@ -76,7 +76,7 @@ def ccsresults(request):
         reg = (request.POST.get('registration')).upper()
         dataset = open("CCS Registrations.csv", "r")
         reader = csv.DictReader(dataset)
-        if reg == "":
+        if not re.match(r"^2[0,1][A-Z]{3}[0-9]{4}$", reg):
             result = "Invalid"
         else:
             for row in reader:
@@ -103,7 +103,6 @@ def ccsresults(request):
         context["event2"] = event[1]
         context["event3"] = event[2]
         context["event4"] = event[3]
-        print(result)
         return HttpResponse(student_details)
         #return render(request, "index.html", context)
     else:

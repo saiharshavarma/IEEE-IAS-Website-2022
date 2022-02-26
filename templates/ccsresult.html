@@ -62,6 +62,7 @@
                   </div>
                 </div>
                 <div class="modal-body" id="checking">
+                  <div id="invalidmsg" style="color: red; display: none;">Invalid Details! Please try again!</div>
                     <form id="formccs">
                       {% csrf_token %}
                       <div class="form-group">
@@ -84,6 +85,8 @@
 
 <script type="text/javascript">
     $(document).on('submit', '#formccs', function(e){
+      setTimeout(console. log("Hello"), 1000);
+      document.getElementById("invalidmsg").style.display = "none";
       e.preventDefault();
       $.ajax({
         type: 'POST', 
@@ -101,9 +104,16 @@
           if (obj.result == "Pass") {
             document.getElementById("pass_result").style.display = "block";
             document.getElementById("details").innerHTML = obj.name + " / " + obj.reg;
+            document.getElementById("formccs").reset();
           }
           else if (obj.result == "Fail") {
             document.getElementById("fail_result").style.display = "block";
+            document.getElementById("formccs").reset();
+          }
+          else {
+            document.getElementById("checking").style.display = "block";
+            document.getElementById("formccs").reset();
+            document.getElementById("invalidmsg").style.display = "block";
           }
         }
       })
@@ -113,5 +123,6 @@
         document.getElementById("pass_result").style.display = "none";
         document.getElementById("fail_result").style.display = "none";
         document.getElementById("checking").style.display = "block";
+        document.getElementById("invalidmsg").style.display = "none";
     }
 </script>
