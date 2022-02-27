@@ -99,6 +99,11 @@
     width: 99%;
     text-align: center;
 }
+/* 
+.modal-header {
+    padding: 0rem;
+    padding-top: 1rem !important;
+} */
 
 .modal-header .close {
     padding: 0;
@@ -109,7 +114,6 @@
 
 .modal-dialog {
     margin: auto;
-
 }
 
 .modal-body {
