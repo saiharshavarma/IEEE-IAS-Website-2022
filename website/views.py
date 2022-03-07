@@ -76,7 +76,7 @@ def ccsresults(request):
         reg = (request.POST.get('registration')).upper()
         dataset = open("CCS Registrations.csv", "r")
         reader = csv.DictReader(dataset)
-        if not re.match(r"^2[0,1][A-Z]{3}[0-9]{4}$", reg):
+        if not re.match(r"^2[0,1][A-Za-z]{3}[0-9]{4}$", reg):
             result = "Invalid"
         else:
             for row in reader:
