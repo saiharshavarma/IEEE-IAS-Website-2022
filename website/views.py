@@ -6,7 +6,7 @@ import pandas as pd
 import csv
 import re
 
-registrations_file = "CCS Registrations.csv"
+registrations_file = "CCS Registrations copy.csv"
 context = {}
 
 def home(request):
