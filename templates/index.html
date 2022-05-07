@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,8 +12,10 @@
 
     <!-- SEO Tags -->
     <title>IEEE Industry Applications Society - VIT</title>
-    <meta name="description" content="IEEE-IAS is an eminent technical chapter at VIT. The chapter's vision lies in linking research to practice to bring about a new industrial revolution amongst the students." />
-    <meta name="keywords" content="IEEE IAS, VIT, Vellore Institute of Technology, Vellore, Events, Blogs, Board, Linking, Research, Practice" />
+    <meta name="description"
+        content="IEEE-IAS is an eminent technical chapter at VIT. The chapter's vision lies in linking research to practice to bring about a new industrial revolution amongst the students." />
+    <meta name="keywords"
+        content="IEEE IAS, VIT, Vellore Institute of Technology, Vellore, Events, Blogs, Board, Linking, Research, Practice" />
     <meta name="robots" content="index, follow" />
 
 
@@ -30,10 +33,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css" />
@@ -43,7 +49,7 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
     <link rel="stylesheet" href="{% static 'css/latestevents.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/ccsresults.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'css/ccsresults.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'css/aboutus.css' %}" />
     <link rel="stylesheet" href="{% static 'css/domain.css' %}" />
     <link rel="stylesheet" href="{% static 'css/blogs.css' %}" />
@@ -51,7 +57,7 @@
     <link rel="stylesheet" href="{% static 'css/board.css' %}" />
     <link rel="stylesheet" href="{% static 'css/contact.css' %}" media="screen" />
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen" />
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />     
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 </head>
 
 <body id="body">
@@ -68,11 +74,8 @@
     <!-- Landing Page Ending -->
 
     <!-- Latest Event Page -->
+    {% include "latestevents.html" %}
     <!-- Latest Event Page Ending -->
-
-    <!-- CCS Result Page -->
-    {% include "ccsresult.html" %}
-    <!-- CCS Result Page Ending -->
 
     <!-- About us Page -->
     {% include "aboutus.html" %}
@@ -103,7 +106,8 @@
     <!-- Footer Ending -->
 
     <!-- Homescroll button -->
-    <a href="#" class="position-fixed bottom-0 end-0 p-3 scrollupbtn" id="scrollupbtn"><i class="bi bi-arrow-up-circle-fill h2"></i></a>
+    <a href="#" class="position-fixed bottom-0 end-0 p-3 scrollupbtn" id="scrollupbtn"><i
+            class="bi bi-arrow-up-circle-fill h2"></i></a>
     <!-- Homescroll button Ending -->
 
     <!-- Javascript -->
@@ -135,17 +139,25 @@
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
     <script src="https://use.typekit.net/xrn0ect.js"></script>
     <script>
         try {
             Typekit.load({
                 async: true,
             });
-        } catch (e) {}
+        } catch (e) { }
     </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
@@ -155,8 +167,8 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/codepen-ga.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
-    </script> 
+        AOS.init();
+    </script>
     <script src="{% static 'js/preloader.js' %}"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
     <script src="{% static 'js/homepage.js' %}"></script>
@@ -172,4 +184,5 @@
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
     <script src="{% static 'js/contact.js' %}"></script>
 </body>
+
 </html>

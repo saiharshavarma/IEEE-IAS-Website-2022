@@ -1,180 +1,233 @@
-.event_container{
+.event_container {
     display: flex;
     justify-content: space-between;
     margin: 5% auto;
 }
- 
- .event_head {
-     margin: auto 0;
-     text-align: center;
- }
- 
- .event_head .mheading {
-     color: #fffdfd;
-     font-style: normal;
-     font-family: "Mulish", sans-serif;
-     position: relative;
-     font-size: 3rem;
-     font-weight: 900;
- }
 
- .event_head .nheading {
-     color: #0c8a2f;
-     font-size: 1.5rem;
-     font-weight: 500;
-     font-family: "Mulish", sans-serif;
-     position: relative;
- }
+.image_box {
+    background: black;
+    position: relative;
+    padding: 1em;
+    border: solid 2.5px #0c8a2f;
+}
 
- .event_right_container {
-     color: white;
-     margin: auto 0 auto 5%;
-     text-align: center;
-     position: relative;
- }
+.image_box img {
+    height: 350px;
+}
 
- #countdown ul {
+.image_box::before,
+.image_box::after {
+    position: absolute;
+    background: inherit;
+    content: '';
+    z-index: 1;
+}
+
+.image_box::before {
+    width: 100px;
+    left: calc(50% - 50px);
+    height: calc(100% + 5px);
+    top: -2.5px;
+}
+
+.image_box::after {
+    height: 100px;
+    left: -2.5px;
+    width: calc(100% + 5px);
+    top: calc(50% - 50px);
+}
+
+.image_box>* {
+    position: relative;
+    z-index: 2;
+    /* ensure any child elements sit above pseudos */
+}
+
+.event_head {
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+}
+
+.event_head .mheading {
+    color: #fffdfd;
+    font-style: normal;
+    font-family: "Mulish", sans-serif;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.event_head .nheading {
+    color: #0c8a2f;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Mulish", sans-serif;
+    position: relative;
+}
+
+.event_right_container {
+    color: white;
+    margin: auto 0 auto 5%;
+    text-align: center;
+    position: relative;
+}
+
+#countdown ul {
     padding-left: 0px !important;
 }
 
- .li_event {
-     display: inline-block;
-     font-size: 1.2em;
-     list-style-type: none;
-     padding: 1em;
-     text-transform: uppercase;
- }
+.li_event {
+    display: inline-block;
+    font-size: 1.2em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
 
- .li_event span {
-     display: block;
-     font-size: 2.8rem;
- }
+.li_event span {
+    display: block;
+    font-size: 2.8rem;
+}
 
- .event_container h1 {
-     color: #0c8a2f;
+.event_container h1 {
+    color: #0c8a2f;
 
 
- }
+}
 
- .button-box {
-     display: flex;
-     justify-content: space-evenly;
- }
+.button-box {
+    display: flex;
+    justify-content: space-evenly;
+}
 
- .event_btn {
-     text-align: right;
-     position: relative;
- }
+.event_btn {
+    text-align: right;
+    position: relative;
+}
 
- .latest_btn {
-     box-sizing: border-box;
-     appearance: none;
-     background-color: transparent;
-     border: 2px solid #0c8a2f;
-     border-radius: 0.4em;
-     padding: 8px;
-     width: 200px;
-     font-size: 1.8rem;
-     margin: 20px;
-     color: #0c8a2f;
- }
+.latest_btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #0c8a2f;
+    border-radius: 0.4em;
+    padding: 8px;
+    width: 200px;
+    font-size: 1.8rem;
+    margin: 20px;
+    color: #0c8a2f;
+}
 
- .discord {
-     box-sizing: border-box;
-     background-color: #0c8a2f;
-     border: 2px solid #0c8a2f;
-     border-radius: 0.4em;
-     padding: 8px;
-     width: 200px;
-     font-size: 1.8rem;
-     margin: 20px;
-     color: black;
- }
+.discord {
+    box-sizing: border-box;
+    background-color: #0c8a2f;
+    border: 2px solid #0c8a2f;
+    border-radius: 0.4em;
+    padding: 8px;
+    width: 200px;
+    font-size: 1.8rem;
+    margin: 20px;
+    color: black;
+}
 
- .event_btn1 {
-     text-align: right;
-     position: relative;
- }
+.event_btn1 {
+    text-align: right;
+    position: relative;
+}
 
- @media screen and (max-width: 576px) {
-    .event_container{
+@media screen and (max-width: 576px) {
+    .event_container {
         margin-top: 80%;
         display: block;
     }
-     .event_head .mheading {
-         color: #fffdfd;
-         font-style: normal;
-         font-family: "Mulish", sans-serif;
-         position: relative;
-         font-size: 2rem;
-         font-weight: 900;
-     }
 
-     .event_head .nheading {
-         color: #0c8a2f;
-         font-size: 1.1rem;
-         font-weight: 500;
-         font-family: "Mulish", sans-serif;
-         position: relative;
-     }
+    .image_box {
+        padding: 0.4em;
+    }
 
-     .event_right_container {
-         color: white;
-         margin: 0 auto;
-         text-align: center;
-         position: relative;
-     }
+    .image_box img {
+        height: 175px;
+    }
 
-     .li_event {
-         display: inline-block;
-         font-size: 0.8em;
-         list-style-type: none;
-         padding: 1em;
-         text-transform: uppercase;
-     }
+    .conference-image {
+        height: 175px;
+    }
 
-     .li_event span {
-         display: block;
-         font-size: 1.5rem;
-     }
-     
-     .button-box{
-         text-align: center;
-         justify-content: space-evenly;
-     }
+    .event_head .mheading {
+        color: #fffdfd;
+        font-style: normal;
+        font-family: "Mulish", sans-serif;
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
 
-     .event_btn {
-         position: relative;
-         text-align: left;
-     }
+    .event_head .nheading {
+        color: #0c8a2f;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: "Mulish", sans-serif;
+        position: relative;
+    }
 
-     .latest_btn {
-         box-sizing: border-box;
-         appearance: none;
-         background-color: transparent;
-         border: 2px solid #0c8a2f;
-         border-radius: 0.4em;
-         padding: 8px;
-         width: 120px;
-         font-size: 1rem;
-         margin: 20px;
-         color: #0c8a2f;
-     }
+    .event_right_container {
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
 
-     .discord {
-         box-sizing: border-box;
-         background-color: #0c8a2f;
-         border: 2px solid #0c8a2f;
-         border-radius: 0.4em;
-         padding: 8px;
-         width: 120px;
-         font-size: 1rem;
-         margin: 20px;
-         color: black;
-     }
+    .li_event {
+        display: inline-block;
+        font-size: 0.8em;
+        list-style-type: none;
+        padding: 1em;
+        text-transform: uppercase;
+    }
 
-     .event_btn1 {
-         text-align: right;
-         position: relative;
-     }
- }
+    .li_event span {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .button-box {
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .event_btn {
+        position: relative;
+        text-align: left;
+    }
+
+    .latest_btn {
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #0c8a2f;
+        border-radius: 0.4em;
+        padding: 8px;
+        width: 120px;
+        font-size: 1rem;
+        margin: 20px;
+        color: #0c8a2f;
+    }
+
+    .discord {
+        box-sizing: border-box;
+        background-color: #0c8a2f;
+        border: 2px solid #0c8a2f;
+        border-radius: 0.4em;
+        padding: 8px;
+        width: 120px;
+        font-size: 1rem;
+        margin: 20px;
+        color: black;
+    }
+
+    .event_btn1 {
+        text-align: right;
+        position: relative;
+    }
+}

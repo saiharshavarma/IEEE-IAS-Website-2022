@@ -1,7 +1,7 @@
 const firebaseConfig = {
 apiKey: "AIzaSyBkP6GOGzorF-7kYYTwxUWtxjfqTikEx7M",
 authDomain: "ieee-ias-website.firebaseapp.com",
-databaseURL: "https://ieee-ias-website-default-rtdb.firebaseio.com",
+databaseURL: "https://automated-billing-management-default-rtdb.firebaseio.com/",
 projectId: "ieee-ias-website",
 storageBucket: "ieee-ias-website.appspot.com",
 messagingSenderId: "934099392871",
