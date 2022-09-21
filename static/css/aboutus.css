@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 430px) {
     .aboutus {
-        /* margin-top: 300px !important; */
+        margin-top: 300px !important;
         height: 70vh;
         position: relative;
     }
@@ -112,7 +112,7 @@
 
 @media screen and (max-width: 788px) {
     .aboutus {
-        /* margin-top: 300px !important; */
+        margin-top: 300px !important;
         height: 70vh;
         position: relative;
     }

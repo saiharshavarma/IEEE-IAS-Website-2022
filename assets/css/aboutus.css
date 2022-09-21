@@ -43,9 +43,11 @@
         height: 70vh;
         position: relative;
     }
+
     .aboutus .heading {
         margin-left: 0%;
     }
+
     .aboutus .about-us {
         width: 300px;
         margin: 0px auto;
@@ -90,9 +92,11 @@
         height: 70vh;
         position: relative;
     }
+
     .aboutus .heading {
         margin-left: 0%;
     }
+
     .aboutus .main4 {
         font-size: 12px !important;
         font-weight: normal !important;
@@ -112,16 +116,20 @@
         height: 70vh;
         position: relative;
     }
+
     .aboutus .about-us {
         margin-left: 40px;
     }
+
     .aboutus .heading {
         margin-left: 0%;
     }
+
     .aboutus h2 {
         text-align: center;
         font-size: 0.75em;
     }
+
     .aboutus .main4 {
         font-size: 15px !important;
         line-height: 105% !important;
@@ -210,7 +218,7 @@
     height: 801px;
 }
 
-.aboutus .swiper-horizontal > .swiper-pagination-bullets,
+.aboutus .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {

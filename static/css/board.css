@@ -4,12 +4,12 @@
     scroll-margin-top: 50px;
 }
 
-.dcarousel-inner{
-    height: 100%;    
+.dcarousel-inner {
+    height: 100%;
     z-index: 6 !important;
 }
 
-.carousel-indicators{
+.carousel-indicators {
     top: -22px !important;
     z-index: 5 !important;
 }
@@ -56,7 +56,7 @@
 }
 
 .mboard #boardbtn1,
-#boardbtn2{
+#boardbtn2 {
     box-shadow: none;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -101,19 +101,19 @@
 }
 
 .faculty {
-    max-height:320px;
+    max-height: 320px;
 }
 
-.faculty-text-box{
-    width:800px;
+.faculty-text-box {
+    width: 800px;
     height: 240px;
     border: solid green;
     padding: 10px 0;
     margin: 40px 20px 0px 20px;
-    border-radius:20px;
+    border-radius: 20px;
 }
 
-.faculty-text{
+.faculty-text {
     margin: auto 0;
 }
 
@@ -148,7 +148,7 @@
     transform: scale(1.0);
 }
 
-.board .container .newcard:hover{
+.board .container .newcard:hover {
     background-color: #181818;
     transform: scale(1.0);
 }
@@ -308,62 +308,79 @@
     .dboard {
         margin-top: 0;
         height: 100vh;
-        display: none !important;        
+        display: none !important;
         /* height: fit-content; */
     }
+
     .board .websiteheading {
         margin: 0px;
+        margin-top: 45% !important;
     }
+
     .mboard {
-        display: block;        
+        display: block;
         transform: scale(0.8);
     }
+
     .board .container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .board .container .card .content .imgBx {
         width: 230px;
         height: 220px;
     }
+
     .board .container .card {
         width: 280px;
         height: 370px;
     }
+
     .board .container .card .content .contentBx p {
         font-size: 24px;
     }
+
     .board .container .card .content .contentBx i p {
         font-size: initial;
     }
+
     .board .container .card .content .contentBx p {
         font-size: 24px;
     }
+
     .board .container .card .content .contentBx i p {
         font-size: initial;
     }
+
     .board .container777 h1 {
         writing-mode: vertical-lr;
     }
+
     .dboard .dcarousel-inner {
         overflow-y: visible !important;
     }
+
     .faculty {
         max-height: none;
     }
-    .facultycard{
+
+    .facultycard {
         transform: scale(0.8) !important;
     }
-    .facultycard:hover{
+
+    .facultycard:hover {
         transform: scale(0.9) !important;
     }
-    .faculty-text-box{
+
+    .faculty-text-box {
         width: 300px;
         margin: 0px 20px;
         padding: 10px;
         height: auto;
     }
+
     .faculty-text h4 {
         font-size: 20px !important;
         margin: 15px 0px;
@@ -406,7 +423,7 @@
     background: var(--swiper-pagination-bullet-inactive-color, #fff) !important;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {

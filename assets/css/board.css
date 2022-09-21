@@ -29,7 +29,7 @@
     justify-content: space-between;
 }
 
-.mboard h3 {
+.mboard h1 {
     margin: 0px !important;
     line-height: 1 !important;
 }
@@ -51,7 +51,7 @@
     box-shadow: none;
 }
 
-.mboard #boardbtn1 {
+.mboard #boardbtn2 {
     color: #0c8a2f;
 }
 
@@ -70,11 +70,11 @@
 }
 
 #M-Board21 {
-    display: block;
+    display: none;
 }
 
 #M-Board22 {
-    display: none;
+    display: block;
 }
 
 .boardhead {
@@ -100,9 +100,13 @@
     justify-content: center;
 }
 
-.faculty{
+.faculty {
+    max-height:320px;
+}
+
+.faculty-text-box{
     width:800px;
-    height: 200px;
+    height: 240px;
     border: solid green;
     padding: 10px 0;
     margin: 40px 20px 0px 20px;
@@ -307,6 +311,10 @@
         display: none !important;        
         /* height: fit-content; */
     }
+    .board .websiteheading {
+        margin: 0px;
+        margin-top: 45%;
+    }
     .mboard {
         display: block;        
         transform: scale(0.8);
@@ -341,6 +349,25 @@
     }
     .dboard .dcarousel-inner {
         overflow-y: visible !important;
+    }
+    .faculty {
+        max-height: none;
+    }
+    .facultycard{
+        transform: scale(0.8) !important;
+    }
+    .facultycard:hover{
+        transform: scale(0.9) !important;
+    }
+    .faculty-text-box{
+        width: 300px;
+        margin: 0px 20px;
+        padding: 10px;
+        height: auto;
+    }
+    .faculty-text h4 {
+        font-size: 20px !important;
+        margin: 15px 0px;
     }
 }
 
